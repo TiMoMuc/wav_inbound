@@ -1,1 +1,2 @@
-# wav_inbound
+# Docker FastAPI App to receive .wav-files
+This repository contains code to spin up a docker container. This container contains a FastAPI App which has an Endpoint to receive .wav files and stores them as blobs in an attached sqlLite Database.
