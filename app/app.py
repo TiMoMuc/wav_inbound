@@ -54,14 +54,12 @@ async def upload_audio(request: Request, api_key: str = Depends(get_api_key)):
         print("Audio data received successfully.")
 
         # Function to generate a timestamp, if needed.
-        # timestamp = int(time.time())
-
+        timestamp = int(time.time())
         # Function to save the file to local storage, just temporary.
-        """ filename = f"/data/recording_{timestamp}.wav"
+        filename = f"/data/recording_{timestamp}.wav"
         async with aiofiles.open(filename, 'wb') as f:
             await f.write(body)
-         """
-
+        
         # Store the audio data in the SQLite database
         conn = sqlite3.connect(db_file)
         cursor = conn.cursor()
