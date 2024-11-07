@@ -4,7 +4,9 @@ This repository contains code to spin up a docker container. This container cont
 # THIS REPO IS UNDER DEVELOPMENT!
 
 ## ToDo:
-* [] Integrate the app directory into the container. (Not just mounted as dev version)
+* [ ] Add .env file and exclude it through .gitignore
+* [ ] Integrate the app directory into the container. (Not just mounted as dev version)
+* [ ] Delete temporary code.
 
 ## Notes
 - The env-Variable in the Dockerfile is the api-key which is needed to access the API Endpoint.

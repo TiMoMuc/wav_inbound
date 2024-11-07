@@ -56,7 +56,7 @@ async def upload_audio(request: Request, api_key: str = Depends(get_api_key)):
         # Function to generate a timestamp, if needed.
         # timestamp = int(time.time())
 
-        # Function to save the file to local storage
+        # Function to save the file to local storage, just temporary.
         """ filename = f"/data/recording_{timestamp}.wav"
         async with aiofiles.open(filename, 'wb') as f:
             await f.write(body)
