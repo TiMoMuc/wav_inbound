@@ -68,21 +68,18 @@ async def upload_audio(request: Request, api_key: str = Depends(get_api_key)):
         conn.close()
         print("Audio data saved successfully.")
 
-        return JSONResponse(
-            content={
-                "status": "success",
-                "message": ".wav successfully received"
-            },
-            status_code=200
-        )
+        return {"status": "success", "message": ".wav successfully received"}, 200
+        
     except Exception as e:
-        return JSONResponse(
+        return {"status": "error", "message": str(e)}, 500
+        
+        """ return JSONResponse(
             content={
                 "status": "error",
                 "message": str(e)
             },
             status_code=500
-        )
+        ) """
 
 if __name__ == "__main__":
     uvicorn.run(app, host="0.0.0.0", port=8000)

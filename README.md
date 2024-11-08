@@ -28,6 +28,7 @@ docker build -t wav_receiver_api .
 docker run -d -p 8801:8000 -v $(pwd)/app:/app -v fastapi-database:/data --restart=always --name wav_receiver_api wav_receiver_api
 ```
 -> Same thing with root permissions in this case.
+-> Make sure, that you run the 'docker run' command from inside the directory.
 
 **Explanation**
 - -d, running the container in detached mode.
